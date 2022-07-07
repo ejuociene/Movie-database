@@ -61,7 +61,7 @@ const getMovies = async (currentPage, searchValue) => {
 	try {
 		searchError.classList.add('hidden');
 		spinner.classList.remove('hidden');
-		const resp = await fetch(`http://www.omdbapi.com/?apikey=86c15441&s=${searchValue}&page=${currentPage}`);
+		const resp = await fetch(`https://www.omdbapi.com/?apikey=86c15441&s=${searchValue}&page=${currentPage}`);
 		const result = await resp.json();
 		spinner.classList.add('hidden');
 		console.log(result);
