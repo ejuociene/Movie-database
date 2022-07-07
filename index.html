@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Batman Movies</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img class="logo_img" src="./assets/imdb logo.png" alt="imdb_logo">
+            <div class="search_bar">
+                <input type="text" id="search" placeholder="Search IMDb">
+                <img class="search_img" src="./assets/search-svgrepo-com.svg" alt="search">
+            </div>
+            <div class="vertical_line"></div>
+            <div class="watchlist__shortcut">
+                <img class="watchlist__shortcut__img" src="./assets/bookmark-plus-svgrepo-com.svg" alt="watchlist">
+                <p class="watchlist__shortcut__text">Watchlist</p>
+                <p class="watchlist__shortcut__count hidden"></p>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="lds-spinner hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="error__msg hidden">
+            <h1 class="error__header">Ooops! </h1>
+            <h2 class="error__text">There seems to be a problem. Please refresh the page.</h2>
+        </div>
+        <div class="intro">
+            <h1 class="intro__header">Welcome to Movie Database!</h1>
+            <h2 class="intro__subheader">Search any movie or TV series <img class="arrow" src="./assets/right.svg"></h2>
+            <h1 class="intro__featured">Fetured today</h1>
+        </div>
+        <div class="movie minimize"></div>
+        <div class="searcherror__msg hidden">
+            <h1 class="searcherror__header">Ooops! </h1>
+            <h2 class="searcherror__text">There seems to be no search results with this keyword. Please try searcing a
+                different keyword.</h2>
+        </div>
+        <nav aria-label="Page navigation example" class="pageNav hidden">
+            <ul class="pagination"></ul>
+            <p class="pageCount"></p>
+        </nav>
+        <div class="mpage hidden">
+            <div class="back mpage__back">
+                <img class="back__img" src="./assets/left.svg" alt="back" />
+                <p class="back__text">Back</p>
+            </div>
+            <div class="mpage__header">
+                <div class="mpage__header__left">
+                    <h1 class="mpage__title"></h1>
+                    <div class="mpage__subheader">
+                        <p class="mpage__type"></p>
+                        <div class="break_dot"></div>
+                        <p class="mpage__released"></p>
+                    </div>
+                </div>
+                <div class="mpage__header__right">
+                    <h2 class="mpage__rating__text">IMDb RATING</h2>
+                    <div class="mpage__rating__container">
+                        <img class="mpage__starimg" src="./assets/star.svg" alt="star">
+                        <p class="mpage__rating"><span class="mpage__rating__num"></span>/10</p>
+                    </div>
+                </div>
+            </div>
+            <img class="mpage__movie__image" src="#" alt="movie">
+            <div class="mpage__description">
+                <div class="mpage__description_left">
+                    <div class="mpage__genre__container">
+                    </div>
+                    <p class="mpage__plot"></p>
+                    <div class="break_line"></div>
+                    <p class="mpage__creator">Creator <span class="mpage__creator__name"></span></p>
+                    <div class="break_line"></div>
+                    <p class="mpage__writer">Writer <span class="mpage__writer__name"></span></p>
+                    <div class="break_line"></div>
+                    <p class="mpage__actors">Actors <span class="mpage__actors__names"></span></p>
+                </div>
+                <div class="mpage__wishlist">
+                    <button class="mpage__wishlist__btn"><span class="add_sign mpage__add"></span><span
+                            class="add_to_watchlist">
+                            Watchlist</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="watchlist hidden">
+            <div class="back watchlist__back">
+                <img class="back__img" src="./assets/left.svg" alt="back" />
+                <p class="back__text">Back</p>
+            </div>
+            <div class="watchlist__header">
+                <h1 class="watchlist__header__text">Your Watchlist</h1>
+                <p class="watchlist__header__count"></p>
+            </div>
+            <div class="watchlist__container">
+                <h1 class="watchlist__empty hidden">Your watchilst is empty</h1>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
